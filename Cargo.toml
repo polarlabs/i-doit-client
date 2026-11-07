@@ -1,0 +1,67 @@
+[package]
+name = "i-doit-client"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[dependencies.chrono]
+version = "0.4.45"
+default-features = false
+
+# alloc: support .format()
+# clock: provides Local timezone
+# serde: support serialization / deserialization of chrono's types
+features = ["alloc", "serde"]
+
+# i-doit reports datetime without timezone
+[dependencies.chrono-tz]
+version = "0.10.4"
+default-features = false
+
+# serde: support serialization / deserialization of Tz
+features = ["serde"]
+
+[dependencies.iana-time-zone]
+version = "0.1.65"
+default-features = false
+
+features = []
+
+[dependencies.reqwest]
+version = "0.13.4"
+default-features = false
+
+# json: support JSON in web requests / responses
+# rustls: use rustls to support TLS
+features = ["json", "rustls"]
+
+[dependencies.serde]
+version = "1.0.229"
+default-features = false
+
+# std: use standard library
+# derive: support annotation?!
+features = ["std", "derive"]
+
+[dependencies.serde_json]
+version = "1.0.151"
+default-features = false
+
+# std: use standard library
+features = ["std"]
+
+[dependencies.tokio]
+version = "1.53.1"
+default-features = false
+
+# macros: use macro to create runtime 
+# rt-multi-thread: distribute async task across multiple threads
+features = ["macros", "rt-multi-thread"]
+
+[dependencies.url]
+version = "2.5.8"
+default-features = false
+
+# serde: support serialization / deserialization of chrono's types
+features = ["serde"]

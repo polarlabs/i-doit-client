@@ -1,0 +1,6 @@
+# Rust build artifacts
+/target/
+
+# JetBrains IDE
+.idea/
+
